@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marantz-tui"
+version = "0.1.0"
+description = "Zero-dependency vintage faceplate TUI and CLI for Marantz and Denon network AV receivers"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [
+  { name = "Ariel Churi" },
+]
+keywords = ["marantz", "denon", "avr", "tui", "cli", "curses", "airplay", "home-audio"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console :: Curses",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Sound/Audio",
+]
+
+[project.urls]
+Homepage = "https://github.com/arielchuri/marantz-tui"
+Repository = "https://github.com/arielchuri/marantz-tui"
+Issues = "https://github.com/arielchuri/marantz-tui/issues"
+
+[project.scripts]
+marantz = "marantz_tui.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
